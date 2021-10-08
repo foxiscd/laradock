@@ -12,10 +12,10 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
     sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/' /etc/apk/repositories \
 ;fi
 
-RUN apk update \
-    && apk upgrade \
-    && apk --update add logrotate \
-    && apk add --no-cache openssl \
+# apk update \
+#    && apk upgrade \
+#    && apk --update add logrotate \
+RUN apk add --no-cache openssl \
     && apk add --no-cache bash
 
 RUN apk add --no-cache curl
