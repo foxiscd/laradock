@@ -13,7 +13,7 @@ RUN apk add --no-cache --virtual .build-deps \
     && make install PREFIX=/ssdb \
     && rm -rf /ssdb/tmp \
     && apk add --virtual .rundeps libstdc++ \
-    && apk add --no-cache bash python2 \
+    && apk add --no-cache bash python3 \
     && apk del .build-deps
 
 EXPOSE 8888
